@@ -1,6 +1,15 @@
 const express = require('express');
-const app = express();
+const path = require('path');
 
-app.use(express.static('public'));
+const app = express();
+const publicDirectory = path.join(__dirname, '../public');
+
+app.use(express.static(publicDirectory));
+
+const details = {title: 'IOT Project', name: 'Aditi'};
+
+app.get('/', (_req, res) => {
+  res.render('index', details);
+});
 
 module.exports = app;
