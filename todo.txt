@@ -1,0 +1,15 @@
+turn ON
+turn OFF 
+ 
+ when turn ON = Node MCU Bulb should glow
+ When turn OFF = Bulb should off 
+
+flow ========
+frontend => backend server => board server (Node MCU)
+
+task :-
+create static page for frontend 
+create two buttons "Turn ON" and "Turn OFF" with toggle process 
+send request to backend server when click on switch and show data status 
+
+ 
